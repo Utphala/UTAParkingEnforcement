@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">UTA Parking Enforcement</string>
+    <string name="vehicle_number">Vehicle Number</string>
 </resources>

@@ -7,6 +7,7 @@ import android.app.Activity;
 import android.app.LoaderManager.LoaderCallbacks;
 import android.content.ContentResolver;
 import android.content.CursorLoader;
+import android.content.Intent;
 import android.content.Loader;
 import android.database.Cursor;
 import android.net.Uri;
@@ -57,7 +58,6 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        requestWindowFeature(Window.FEATURE_CONTEXT_MENU);
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
@@ -104,6 +104,8 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
 
     public void attemptLogin() {
         Toast.makeText(getApplicationContext(), "Hey, I am attempting to login. Not!", Toast.LENGTH_LONG).show();
+        Intent intent = new Intent(this, LookupInfo.class);
+        startActivity(intent);
     }
     public void attemptLogin_() {
         if (mAuthTask != null) {
