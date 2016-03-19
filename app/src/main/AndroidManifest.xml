@@ -23,7 +23,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LookupInfo"></activity>
+        <activity android:name=".LookupInfo" />
+        <activity android:name=".UpdateInformation" />
     </application>
 
 </manifest>

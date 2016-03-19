@@ -3,5 +3,11 @@
     <string name="vehicle_number">Vehicle Number</string>
     <string name="reset_password">Reset Password</string>
     <string name="enter_email">Enter your Email ID</string>
+    <string name="title_activity_vehicle_owner_home_screen">VehicleOwnerHomeScreen</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
 </resources>
 
