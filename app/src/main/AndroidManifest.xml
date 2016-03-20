@@ -7,6 +7,9 @@
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- To place call to towing service -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.intent.action.CALL" />
 
     <application
         android:allowBackup="true"
@@ -25,10 +28,6 @@
         </activity>
         <activity android:name=".LookupInfo" />
         <activity android:name=".PreviousViolations" />
-        <activity
-            android:name=".TestDrawer"
-            android:label="@string/title_activity_test_drawer"
-            android:theme="@style/NoActionBar" />
         <activity
             android:name=".EnforcerHomeScreen"
             android:label="@string/title_activity_enforcer_home_screen"
