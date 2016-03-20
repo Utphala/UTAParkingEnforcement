@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_slideshow_update_user"
+            android:icon="@android:drawable/ic_menu_edit"
+            android:title="Update User Inforamtion" />
+        <item
+            android:id="@+id/nav_slideshow_update_vehicle"
+            android:icon="@android:drawable/ic_menu_edit"
+            android:title="Update Vehicle Inforamtion" />
+        <item
+            android:id="@+id/nav_slideshow_change_tow_service"
+            android:icon="@android:drawable/ic_menu_edit"
+            android:title="Change Tow Service" />
+        <item
+            android:id="@+id/nav_slideshow_change_parking_type"
+            android:icon="@android:drawable/ic_menu_edit"
+            android:title="Change Parking Type" />
+    </group>
+
+    <item android:title="Account Activity">
+        <menu>
+            <item
+                android:id="@+id/nav_reset_password"
+                android:icon="@android:drawable/ic_menu_manage"
+                android:title="Reset Password" />
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@android:drawable/ic_dialog_alert"
+                android:title="Logout" />
+        </menu>
+    </item>
+
+</menu>

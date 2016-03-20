@@ -104,7 +104,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
 
     public void attemptLogin() {
         Toast.makeText(getApplicationContext(), "Hey, I am attempting to login. Not!", Toast.LENGTH_LONG).show();
-        Intent intent = new Intent(this, LookupInfo.class);
+        Intent intent = new Intent(this, AdminHomeScreen.class);
         startActivity(intent);
     }
     public void attemptLogin_() {
