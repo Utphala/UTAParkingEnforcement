@@ -78,7 +78,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
             }
         });
 
-        Button mEmailSignInButton = (Button) findViewById(R.id.email_sign_in_button);
+        Button mEmailSignInButton = (Button) findViewById(R.id.signin_button);
         mEmailSignInButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -103,8 +103,8 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
      */
 
     public void attemptLogin() {
-        Toast.makeText(getApplicationContext(), "Hey, I am attempting to login. Not!", Toast.LENGTH_LONG).show();
-        Intent intent = new Intent(this, LookupInfo.class);
+        Toast.makeText(getApplicationContext(), "Hey hey, I am attempting to login. Not!", Toast.LENGTH_LONG).show();
+        Intent intent = new Intent(this, EnforcerHomeScreen.class);
         startActivity(intent);
     }
     public void attemptLogin_() {

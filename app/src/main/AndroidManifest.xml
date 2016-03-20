@@ -23,7 +23,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LookupInfo"></activity>
+        <activity android:name=".LookupInfo" />
+        <activity android:name=".PreviousViolations" />
+        <activity
+            android:name=".TestDrawer"
+            android:label="@string/title_activity_test_drawer"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".EnforcerHomeScreen"
+            android:label="@string/title_activity_enforcer_home_screen"
+            android:theme="@style/NoActionBar"></activity>
     </application>
 
 </manifest>
