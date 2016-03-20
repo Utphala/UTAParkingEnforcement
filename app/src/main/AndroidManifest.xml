@@ -27,7 +27,12 @@
         <activity
             android:name=".AdminHomeScreen"
             android:label="@string/title_activity_admin_home_screen"
-            android:theme="@style/NoActionBar"></activity>
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".UserHomeScreen"
+            android:label="@string/title_activity_user_home_screen"
+            android:theme="@style/NoActionBar" />
+        <activity android:name=".RegisterUser"></activity>
     </application>
 
 </manifest>

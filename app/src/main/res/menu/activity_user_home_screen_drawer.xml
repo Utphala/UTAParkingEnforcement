@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_buy_permit"
+            android:icon="@android:drawable/ic_menu_add"
+            android:title="Buy Permit" />
+        <item
+            android:id="@+id/nav_renew_permit"
+            android:icon="@android:drawable/ic_menu_mapmode"
+            android:title="Renew Permit" />
+        <item
+            android:id="@+id/nav_cancel_permit"
+            android:icon="@android:drawable/ic_delete"
+            android:title="Cancel Permit" />
+        <item
+            android:id="@+id/nav_pay_fine"
+            android:icon="@android:drawable/ic_input_get"
+            android:title="Pay Fine" />
+        <item
+            android:id="@+id/nav_view_notification"
+            android:icon="@android:drawable/ic_dialog_email"
+            android:title="View Notification" />
+    </group>
+
+    <item android:title="Account Activity">
+        <menu>
+            <item
+                android:id="@+id/nav_user_reset_password"
+                android:icon="@android:drawable/ic_menu_manage"
+                android:title="Reset Password" />
+            <item
+                android:id="@+id/nav_user_logout"
+                android:icon="@android:drawable/ic_dialog_alert"
+                android:title="Logout" />
+        </menu>
+    </item>
+
+
+</menu>
