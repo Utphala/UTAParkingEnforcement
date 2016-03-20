@@ -4,12 +4,16 @@
     <string name="reset_password">Reset Password</string>
     <string name="enter_email">Enter your Email ID</string>
     <string name="title_activity_vehicle_owner_home_screen">VehicleOwnerHomeScreen</string>
-
+    <string name="info_scr_owner">Owner</string>
+    <string name="info_scr_permit">Permit</string>
+    <string name="info_scr_vehicle_type">Vehicle Info</string>
+    <string name="info_scr_button_prev_violations">Previous Violations</string>
+    <string name="title_activity_test_drawer">TestDrawer</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-
     <string name="action_settings">Settings</string>
     <string name="title_activity_admin_home_screen">Welcome Admin!</string>
     <string name="title_activity_user_home_screen">Welcome!!</string>
+    <string name="title_activity_enforcer_home_screen">EnforcerHomeScreen</string>
 </resources>
 

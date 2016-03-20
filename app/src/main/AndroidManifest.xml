@@ -24,6 +24,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".LookupInfo" />
+
         <activity
             android:name=".AdminHomeScreen"
             android:label="@string/title_activity_admin_home_screen"
@@ -39,6 +40,14 @@
         <activity
             android:name=".ResetPassword"
             android:label="@string/app_name" />
+
+        <activity android:name=".PreviousViolations" />
+
+        <activity
+            android:name=".EnforcerHomeScreen"
+            android:label="@string/title_activity_enforcer_home_screen"
+            android:theme="@style/NoActionBar"></activity>
+
     </application>
 
 </manifest>
