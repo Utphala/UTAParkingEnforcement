@@ -1,8 +1,14 @@
 package edu.uta.mavs.utaparkingenforcement;
 
+import android.Manifest;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -12,9 +18,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
+
 
 public class EnforcerHomeScreen extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+    private static final int CALL_PHONE_REQUEST_CODE = 42;
+    private static final String TOW_SERVICE_PHONE_NUM = "+1-206-747-6365";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +42,7 @@ public class EnforcerHomeScreen extends AppCompatActivity
             }
         });
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.enforcer_screen_id);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
@@ -44,7 +54,7 @@ public class EnforcerHomeScreen extends AppCompatActivity
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.enforcer_screen_id);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
@@ -80,22 +90,47 @@ public class EnforcerHomeScreen extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
-
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
+        switch (id) {
+            case R.id.nav_search:
+                Snackbar.make((View) findViewById(R.id.enforcer_screen_id), "Not implemented yet!", Snackbar.LENGTH_SHORT).show();
+                break;
+            case R.id.nav_record_violation:
+                Snackbar.make((View) findViewById(R.id.enforcer_screen_id), "Not implemented yet!", Snackbar.LENGTH_SHORT).show();
+                break;
+            case R.id.nav_add_note:
+                Snackbar.make((View) findViewById(R.id.enforcer_screen_id), "Not implemented yet!", Snackbar.LENGTH_SHORT).show();
+                break;
+            case R.id.nav_call_towing:
+                if (ContextCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+                    ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CALL_PHONE}, CALL_PHONE_REQUEST_CODE);
+                } else {
+                    callTowingService();
+                }
+                break;
         }
-
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.enforcer_screen_id);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    private void callTowingService() {
+        Intent intent = new Intent(Intent.ACTION_CALL);
+        intent.setData(Uri.parse("tel:" + TOW_SERVICE_PHONE_NUM));
+        startActivity(intent);
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode,
+                                           String permissions[], int[] grantResults) {
+        switch (requestCode) {
+            case CALL_PHONE_REQUEST_CODE:
+                if(grantResults != null && grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    callTowingService();
+                } else {
+                    Snackbar.make((View)findViewById(R.id.enforcer_screen_id), "You should grant permission to call yo!", Snackbar.LENGTH_SHORT).show();
+                }
+                break;
+        }
+
     }
 }
