@@ -1,5 +1,6 @@
 package edu.uta.mavs.utaparkingenforcement;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -27,7 +28,7 @@ public class AdminHomeScreen extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "This provides admin functionality", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
@@ -91,6 +92,8 @@ public class AdminHomeScreen extends AppCompatActivity
         }
         else if (id == R.id.nav_reset_password) {
             // Handle the reset password action
+            Intent intent = new Intent(this,ResetPassword.class);
+            startActivity(intent);
         }
         else if (id == R.id.nav_logout) {
             // Handle the logout action
