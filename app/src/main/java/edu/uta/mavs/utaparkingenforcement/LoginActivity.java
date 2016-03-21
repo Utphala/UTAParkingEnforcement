@@ -86,6 +86,35 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
             }
         });
 
+        Button adminScreenButton = (Button) findViewById(R.id.admin_screen_button);
+        adminScreenButton.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "Hey, I am going to admin screen. Not, Not!", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplicationContext(), AdminHomeScreen.class);
+                startActivity(intent);
+            }
+        });
+        Button enforcerScreenButton = (Button) findViewById(R.id.enforcer_screen_button);
+        enforcerScreenButton.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "Hey, I am going to Enforcer screen AKA the best screen!", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplicationContext(), EnforcerHomeScreen.class);
+                startActivity(intent);
+            }
+        });
+
+        Button registerButton = (Button) findViewById(R.id.register_button);
+        registerButton.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "Hey, I am going to RegisterUser screen!", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplicationContext(), RegisterUser.class);
+                startActivity(intent);
+            }
+        });
+
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
     }
