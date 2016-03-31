@@ -9,13 +9,14 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="edu.uta.mavs.utaparkingenforcement.LookupInfo">
 
-    <SearchView
-        android:layout_width="match_parent"
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/search_bar"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="LookUp Vehicle"
+        android:id="@+id/textView_lookup_vehicle"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:queryHint="Enter Vehicle Number Here!" />
+        android:layout_centerHorizontal="true" />
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -77,9 +78,17 @@
             android:id="@+id/button"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:onClick="showPreviousViolations"/>
+            android:onClick="showPreviousViolatio"/>
 
 
     </RelativeLayout>
+
+    <SearchView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/search_bar"
+        android:queryHint ="Enter Vehicle Number Here!"
+        android:layout_below="@+id/textView_lookup_vehicle"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>

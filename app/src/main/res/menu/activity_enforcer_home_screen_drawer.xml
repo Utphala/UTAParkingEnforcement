@@ -14,11 +14,11 @@
         <item
             android:id="@+id/nav_add_note"
             android:icon="@android:drawable/ic_menu_edit"
-            android:title="Add Vehicle note" />
+            android:title="Send Notification" />
         <item
             android:id="@+id/nav_call_towing"
             android:icon="@android:drawable/stat_notify_sync_noanim"
-            android:title="Towing Service" />
+            android:title="Call Tow Service" />
     </group>
     <item android:title="Account Activity">
         <menu>

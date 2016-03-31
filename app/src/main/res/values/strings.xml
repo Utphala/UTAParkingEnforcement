@@ -15,5 +15,8 @@
     <string name="title_activity_admin_home_screen">Welcome Admin!</string>
     <string name="title_activity_user_home_screen">Welcome!!</string>
     <string name="title_activity_enforcer_home_screen">EnforcerHomeScreen</string>
+    <string name="title_activity_buy_permit">BuyPermit</string>
+    <string name="title_activity_add_vehicle">add_vehicle</string>
+    <string name="section_format">Hello World from section: %1$d</string>
 </resources>
 

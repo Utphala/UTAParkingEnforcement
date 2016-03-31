@@ -7,86 +7,77 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="edu.uta.mavs.utaparkingenforcement.RegisterUser">
+    tools:context="edu.uta.mavs.utaparkingenforcement.payment">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Register"
-        android:id="@+id/textView_register"
+        android:text="Make Payment"
+        android:id="@+id/textView_make_payment"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
     <EditText
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:inputType="textPersonName"
-    android:hint="Name"
-    android:ems="10"
-    android:id="@+id/user_name"
-    android:layout_marginTop="30dp"
-    android:layout_below="@+id/textView_register"
-    android:layout_alignParentStart="true" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="Name"
+        android:ems="10"
+        android:id="@+id/user_name"
+        android:layout_below="@+id/textView_make_payment"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="48dp" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textEmailAddress"
+        android:inputType="number"
+        android:hint="Credit card number"
         android:ems="10"
-        android:id="@+id/user_email"
+        android:id="@+id/credit_card_number"
         android:layout_below="@+id/user_name"
-        android:layout_alignParentStart="true"
-        android:hint="Email" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:ems="10"
-        android:id="@+id/password"
-        android:layout_below="@+id/user_email"
-        android:layout_toStartOf="@+id/textView_register"
-        android:hint="Password"
-        android:layout_alignEnd="@+id/user_email" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:ems="10"
-        android:id="@+id/confrim_password"
-        android:layout_below="@+id/password"
-        android:layout_alignParentStart="true"
-        android:hint="Confrim Password" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="phone"
-        android:ems="10"
-        android:id="@+id/phone_number"
-        android:layout_below="@+id/confrim_password"
-        android:layout_alignParentStart="true"
-        android:hint="Phone Number" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPostalAddress"
-        android:ems="10"
-        android:id="@+id/address"
-        android:hint="Address"
-        android:layout_below="@+id/phone_number"
         android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberSigned"
+        android:hint="CVV"
+        android:ems="10"
+        android:id="@+id/cvv"
+        android:layout_below="@+id/credit_card_number"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/month" />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:hint="Month"
+        android:ems="10"
+        android:id="@+id/month"
+        android:layout_below="@+id/cvv"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/year" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberSigned"
+        android:hint="Year"
+        android:ems="10"
+        android:id="@+id/year"
+        android:layout_below="@+id/month"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/textView_make_payment" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Register"
-        android:id="@+id/button_register"
-        android:layout_below="@+id/address"
+        android:text="Pay"
+        android:id="@+id/btn_pay"
+        android:layout_below="@+id/year"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="34dp" />
+        android:layout_marginTop="38dp" />
 
 </RelativeLayout>

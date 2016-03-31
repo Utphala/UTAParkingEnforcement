@@ -1,0 +1,81 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="edu.uta.mavs.utaparkingenforcement.add_vehicle$PlaceholderFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Add Vehicle"
+        android:id="@+id/textView_add_vehicle"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="License Plate"
+        android:ems="10"
+        android:id="@+id/vehicle_number"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/textView_add_vehicle"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="Make"
+        android:ems="10"
+        android:id="@+id/make"
+        android:layout_below="@+id/vehicle_number"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="Model"
+        android:ems="10"
+        android:id="@+id/model"
+        android:layout_below="@+id/make"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="State"
+        android:ems="10"
+        android:id="@+id/state"
+        android:layout_below="@+id/model"
+        android:layout_alignParentStart="true"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="Color"
+        android:ems="10"
+        android:id="@+id/color"
+        android:layout_below="@+id/state"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Vehicle"
+        android:id="@+id/btn_add_vehicle"
+        android:layout_marginTop="34dp"
+        android:layout_below="@+id/color"
+        android:layout_alignStart="@+id/textView_add_vehicle" />
+
+
+</RelativeLayout>
