@@ -33,15 +33,6 @@ public class EnforcerHomeScreen extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.enforcer_screen_id);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -92,10 +83,12 @@ public class EnforcerHomeScreen extends AppCompatActivity
 
         switch (id) {
             case R.id.nav_search:
-                Snackbar.make((View) findViewById(R.id.enforcer_screen_id), "Not implemented yet!", Snackbar.LENGTH_SHORT).show();
+                Intent intent = new Intent(this,LookupInfo.class);
+                startActivity(intent);
                 break;
             case R.id.nav_record_violation:
-                Snackbar.make((View) findViewById(R.id.enforcer_screen_id), "Not implemented yet!", Snackbar.LENGTH_SHORT).show();
+                Intent intent_rec = new Intent(this,record_violation.class);
+                startActivity(intent_rec);
                 break;
             case R.id.nav_add_note:
                 Snackbar.make((View) findViewById(R.id.enforcer_screen_id), "Not implemented yet!", Snackbar.LENGTH_SHORT).show();

@@ -8,8 +8,40 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/admin_logo"
+    android:backgroundTintMode="src_over"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="edu.uta.mavs.utaparkingenforcement.AdminHomeScreen"
     tools:showIn="@layout/app_bar_admin_home_screen">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="A WALK IN THE PARK(ING LOT)"
+        android:id="@+id/textView11"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textColor="#F39C12"
+        android:textSize="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="75dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text = "You&#8217;ve got places to go and people
+to see. You just need a parking space to help get you there on time. Enter the
+Department of Parking and Transportation Services. We aim to provide efficient
+and responsive customer service in your quest to find the perfect parking space
+and park there without getting a dreaded parking citation. "
+        android:id="@+id/textView10"
+        android:textAlignment="center"
+        android:textStyle="normal"
+        android:textColor="#FDFEFE"
+        android:textSize="20dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true" />
 </RelativeLayout>

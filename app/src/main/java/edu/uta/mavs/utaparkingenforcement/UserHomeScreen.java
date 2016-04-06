@@ -24,15 +24,6 @@ public class UserHomeScreen extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "This provides user functionality", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -82,13 +73,17 @@ public class UserHomeScreen extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_buy_permit) {
-            // Handle the camera action
+            Intent intent = new Intent(this,add_vehicle.class);
+            startActivity(intent);
         } else if (id == R.id.nav_renew_permit) {
-
+            Intent intent = new Intent(this,renew_permit.class);
+            startActivity(intent);
         } else if (id == R.id.nav_cancel_permit) {
-
+            Intent intent = new Intent(this,cancel_permit.class);
+            startActivity(intent);
         } else if (id == R.id.nav_pay_fine) {
-
+            Intent intent = new Intent(this,payment.class);
+            startActivity(intent);
         } else if (id == R.id.nav_view_notification) {
 
         } else if (id == R.id.nav_user_reset_password) {

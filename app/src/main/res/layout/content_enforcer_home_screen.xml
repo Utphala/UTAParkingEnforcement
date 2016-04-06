@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/college_park_center"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -12,4 +13,30 @@
     tools:context="edu.uta.mavs.utaparkingenforcement.EnforcerHomeScreen"
     tools:showIn="@layout/app_bar_enforcer_home_screen">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="CITATION"
+        android:id="@+id/textView11"
+        android:textStyle="bold"
+        android:textColor="#F39C12"
+        android:textSize="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="75dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text = "So you&#8217;ve found yourself with a parking citation. Not to worry. We make taking care of it as painless as we possibly can. Simply follow the directions in the options below. If you have any questions or need assistance, please don't hesitate to contact Parking and Transportation Services at 817-272-3907."
+        android:id="@+id/textView10"
+        android:textAlignment="center"
+        android:textStyle="normal"
+        android:textColor="#FDFEFE"
+        android:textSize="20dp"
+        android:layout_below="@+id/textView11"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="64dp" />
 </RelativeLayout>

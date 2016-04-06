@@ -104,6 +104,8 @@
         android:text="None"
         android:id="@+id/radio_btn_none"
         android:layout_below="@+id/radio_btn_car_hit"
-        android:checked="true" />
+        android:checked="true"
+        android:enabled="true"
+        android:clickable="true" />
 
 </RelativeLayout>
